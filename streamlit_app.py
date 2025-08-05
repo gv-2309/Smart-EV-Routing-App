@@ -168,18 +168,19 @@ if uploaded_file is not None:
                     labels.append(label)
                     folium.Marker([lat, lon], tooltip=label, icon=folium.Icon(color=color)).add_to(m)
 
-                # Custom display format:
+                # Custom display format with Location names
                 display_labels = []
-                for lbl in labels:
-                    if lbl == "Depot":
-                        display_labels.append(lbl)
+                for idx in route:
+                    if idx == 0:
+                        display_labels.append("Depot")
                     else:
-                        parts = lbl.split(" ")
-                        node_id = parts[0]
-                        node_type = parts[1].strip("()")
-                        display_labels.append(f"{node_type}{node_id.strip('C').strip('DS')} ({node_type})")
-
+                        row = customers.iloc[idx - 1]
+                        node_type = row["NodeType"]
+                        location_name = row["Location"]  # <-- Make sure CSV has this column
+                        display_labels.append(f"{location_name} ({node_type})")
+                
                 st.write(" → ".join(display_labels))
+
                 score, used, discharged = scores[i]
                 st.metric("Driver Score", f"{score}")
                 st.metric("Energy Used (kWh)", f"{used:.2f}")
@@ -201,3 +202,4 @@ st.markdown("""
     REVA University, Bangalore
 </div>
 """, unsafe_allow_html=True)
+
