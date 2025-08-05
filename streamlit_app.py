@@ -133,8 +133,6 @@ def solve_vrp(vehicle_count, capacity, depot, customers, distance_matrix, discha
 
     return output, scores
 
-
-
 # --- Main Logic ---
 if uploaded_file is not None:
     try:
@@ -153,7 +151,7 @@ if uploaded_file is not None:
 
             m = folium.Map(location=[depot["Latitude"], depot["Longitude"]], zoom_start=12)
             for i, (v_id, route) in enumerate(solution):
-                st.subheader(f" Vehicle  Route:")
+                st.subheader(f"Vehicle {v_id + 1} Route:")
                 labels = []
                 for idx in route:
                     if idx == 0:
@@ -162,13 +160,26 @@ if uploaded_file is not None:
                         color = "blue"
                     else:
                         row = customers.iloc[idx - 1]
-                        label = f"{row['ID']} ({row['NodeType']})"
+                        node_id = row["ID"]
+                        node_type = row["NodeType"]
+                        label = f"{node_id} ({node_type})"
                         lat, lon = row["Latitude"], row["Longitude"]
-                        color = "green" if row["NodeType"].lower() == "customer" else "red"
+                        color = "green" if node_type.lower() == "customer" else "red"
                     labels.append(label)
                     folium.Marker([lat, lon], tooltip=label, icon=folium.Icon(color=color)).add_to(m)
 
-                st.write(" → ".join(labels))
+                # Custom display format:
+                display_labels = []
+                for lbl in labels:
+                    if lbl == "Depot":
+                        display_labels.append(lbl)
+                    else:
+                        parts = lbl.split(" ")
+                        node_id = parts[0]
+                        node_type = parts[1].strip("()")
+                        display_labels.append(f"{node_type}{node_id.strip('C').strip('DS')} ({node_type})")
+
+                st.write(" → ".join(display_labels))
                 score, used, discharged = scores[i]
                 st.metric("Driver Score", f"{score}")
                 st.metric("Energy Used (kWh)", f"{used:.2f}")
