@@ -1,72 +1,83 @@
+
 # Smart EV Routing App
 
-**Team-Mind_Mesh**  
-Developers: Amrutha D, Vishnu V  
-Institution: REVA University, Bangalore
-
-## Live Demo
-https://smart-ev-routing-app.streamlit.app/
-
-## GitHub Repository
-https://github.com/gv-2309/Smart-EV-Routing-App
+**Team - Mind_Mesh**  
+**Developers**: Amrutha D, Vishnu V  
+**Institution**: REVA University, Bangalore
 
 ---
 
-## Problem Statement
+## 🚀 Live Demo  
+[Click here to try the app](https://smart-ev-routing-app.streamlit.app/)
 
-[Fleet Operations] Problem-2.1: EV Routing with Multi-Service Delivery Model
-
----
-
-## Features
-
-- Upload custom test cases or use built-in ones
-- Visualize vehicle routes on an interactive map
-- Optimize deliveries using Google OR-Tools
-- Smart Discharge Mode for grid-aware energy return
-- Real-time display of energy usage, earnings, and driver scores
+## 💻 GitHub Repository  
+[https://github.com/gv-2309/Smart-EV-Routing-App](https://github.com/gv-2309/Smart-EV-Routing-App)
 
 ---
 
-
+## 🧠 Problem Statement  
+**[Fleet Operations] Problem-2.1: EV Routing with Multi-Service Delivery Model**
 
 ---
 
-## Requirements
+## ✨ Features
+
+- 📂 Upload custom test cases or use built-in ones
+- 🗺️ Visualize vehicle routes on an interactive map
+- ⚙️ Optimize deliveries using Google OR-Tools
+- ⚡ Smart Discharge Mode for grid-aware energy return
+- 📊 Real-time display of energy usage, earnings, and driver scores
+
+---
+
+## ⚙️ Requirements
 
 Install the required libraries:
 
 
 pip install -r requirements.txt
-How to Run the App Locally on VS Code
-Clone the Repository
 
 
-git clone https://github.com/your-username/ev-routing-app.git
-cd ev-routing-app
-Create a Virtual Environment (recommended)
+---
+
+## 🛠️ How to Run the App Locally (VS Code)
+
+### 1. Clone the Repository
 
 
+git clone https://github.com/gv-2309/Smart-EV-Routing-App.git
+cd Smart-EV-Routing-App
+
+
+### 2. Create and Activate a Virtual Environment (Recommended)
+
+
+# Create virtual environment
 python -m venv venv
-# Activate it:
-# Windows
-venv\Scripts\activate
-# Mac/Linux
-source venv/bin/activate
-Install Dependencies
 
+# Activate on Windows
+venv\Scripts\activate
+
+# Activate on Mac/Linux
+source venv/bin/activate
+
+
+### 3. Install Dependencies
 
 
 pip install -r requirements.txt
-Ensure Folder Structure
-
-Place your CSV test cases inside a folder named Test_Case_CSV_Files in the project directory.
-
-## Example:
 
 
+---
 
-Smart-EV-routing-app/
+## 📁 Ensure Folder Structure
+
+Place your CSV test cases inside a folder named `Test_Case_CSV_Files` in the project directory.
+
+### Example Structure:
+
+
+Smart-EV-Routing-App/
 ├── streamlit_app.py
 ├── requirements.txt
 ├── Test_Case_CSV_Files/
@@ -78,41 +89,37 @@ Smart-EV-routing-app/
 │   └── Chennai_testcase.csv
 
 
-Run the Streamlit App
+---
 
+## 📥 Sample Input Format
 
+CSV file **must contain** the following columns:
 
+* `ID`
+* `Latitude`
+* `Longitude`
+* `Demand`
+* `NodeType` (Depot, Customer, DischargeStation)
+* `Location`
 
-streamlit run streamlit_app.py
-Open in Browser
+---
 
-Visit: http://localhost:8501
+## 📽️ Demo Video
 
-## Sample Input Format
-CSV file must contain the following columns:
+🎬 [Watch Demo](https://tinyurl.com/hackotsav-2k25)
 
-ID
+---
 
-Latitude
+## 📬 Contact
 
-Longitude
+For queries or collaboration, reach out:
 
-Demand
+* Vishnu V — [gvs.vishnuv@email.com](mailto:gvs.vishnuv@email.com)
+* Amrutha D — [amruthadandigimath@gmail.com](mailto:amruthadandigimath@gmail.com)
 
-NodeType (Depot, Customer, DischargeStation)
+```
 
-Location
+---
 
-
-
-
-
-## Demo Video:
-https://tinyurl.com/hackotsav-2k25
-
-
-
-
-## Contact
-For queries or collaboration, reach out at:
-gvs.vishnuv@email.com | amruthadandigimath@gmail.com
+You can now copy and paste this into your `README.md` or GitHub page. It will maintain proper formatting, link behavior, and collapses neatly when viewed. If you want me to directly edit your `README.md` or give it as a downloadable file, just let me know!
+```
