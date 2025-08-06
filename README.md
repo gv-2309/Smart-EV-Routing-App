@@ -36,21 +36,17 @@ https://github.com/gv-2309/Smart-EV-Routing-App
 
 Install the required libraries:
 
-```bash
+
 pip install -r requirements.txt
 How to Run the App Locally on VS Code
 Clone the Repository
 
-bash
-Copy
-Edit
+
 git clone https://github.com/your-username/ev-routing-app.git
 cd ev-routing-app
 Create a Virtual Environment (recommended)
 
-bash
-Copy
-Edit
+
 python -m venv venv
 # Activate it:
 # Windows
@@ -59,9 +55,8 @@ venv\Scripts\activate
 source venv/bin/activate
 Install Dependencies
 
-bash
-Copy
-Edit
+
+
 pip install -r requirements.txt
 Ensure Folder Structure
 
@@ -69,8 +64,6 @@ Place your CSV test cases inside a folder named Test_Case_CSV_Files in the proje
 
 ## Example:
 
-Copy
-Edit
 
 
 Smart-EV-routing-app/
@@ -87,9 +80,9 @@ Smart-EV-routing-app/
 
 Run the Streamlit App
 
-bash
-Copy
-Edit
+
+
+
 streamlit run streamlit_app.py
 Open in Browser
 
