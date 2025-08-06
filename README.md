@@ -1,4 +1,3 @@
-
 # Smart EV Routing App
 
 **Team - Mind_Mesh**  
@@ -118,4 +117,5 @@ For queries or collaboration, reach out:
 * Amrutha D — [amruthadandigimath@gmail.com](mailto:amruthadandigimath@gmail.com)
 
 ```
+
 
