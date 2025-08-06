@@ -34,9 +34,9 @@
 
 Install the required libraries:
 
-
+```bash
 pip install -r requirements.txt
-
+````
 
 ---
 
@@ -44,14 +44,14 @@ pip install -r requirements.txt
 
 ### 1. Clone the Repository
 
-
+```bash
 git clone https://github.com/gv-2309/Smart-EV-Routing-App.git
 cd Smart-EV-Routing-App
-
+```
 
 ### 2. Create and Activate a Virtual Environment (Recommended)
 
-
+```bash
 # Create virtual environment
 python -m venv venv
 
@@ -60,13 +60,13 @@ venv\Scripts\activate
 
 # Activate on Mac/Linux
 source venv/bin/activate
-
+```
 
 ### 3. Install Dependencies
 
-
+```bash
 pip install -r requirements.txt
-
+```
 
 ---
 
@@ -76,7 +76,7 @@ Place your CSV test cases inside a folder named `Test_Case_CSV_Files` in the pro
 
 ### Example Structure:
 
-
+```
 Smart-EV-Routing-App/
 ├── streamlit_app.py
 ├── requirements.txt
@@ -87,7 +87,7 @@ Smart-EV-Routing-App/
 │   ├── Mumbai_testcase.csv
 │   ├── Hyderabad_testcase.csv
 │   └── Chennai_testcase.csv
-
+```
 
 ---
 
@@ -119,7 +119,3 @@ For queries or collaboration, reach out:
 
 ```
 
----
-
-You can now copy and paste this into your `README.md` or GitHub page. It will maintain proper formatting, link behavior, and collapses neatly when viewed. If you want me to directly edit your `README.md` or give it as a downloadable file, just let me know!
-```
