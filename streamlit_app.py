@@ -151,7 +151,7 @@ if uploaded_file is not None:
 
             m = folium.Map(location=[depot["Latitude"], depot["Longitude"]], zoom_start=12)
             for i, (v_id, route) in enumerate(solution):
-                st.subheader(f"Vehicle {v_id + 1} Route:")
+                st.subheader(f"Vehicle Route:")
                 labels = []
                 for idx in route:
                     if idx == 0:
@@ -202,4 +202,5 @@ st.markdown("""
     REVA University, Bangalore
 </div>
 """, unsafe_allow_html=True)
+
 
